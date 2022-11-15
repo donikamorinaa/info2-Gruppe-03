@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatik 2 Praktikum - Gästebuch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#entries">Eintrag</a></li>
+            <li><a href="#archiv">Archiv</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <h1>Gästebuch</h1>
+
+</header>
+
+<section id="guestbook">
+
+    <p>Willkommen auf der Seite "Gästebuch". Hier können Sie einen Eintrag betätigen, welcher in einem Gästebuch der Studenten des Sommersemesters21 erscheinen wird.
+    </p>
+    <p>Viel Spaß!</p>
+
+</section>
+
+<section id="entries">
+    <h2>Neuer Eintrag</h2><br><br><br>
+</section>
+
+<form action="http://localhost:8080/api/guestbook/entries" method="POST"
+      onsubmit="postDataAPI(event, this), status(event, this)"
+>
+
+    <br><br>
+    <input type="text" name="Name" id="name" placeholder="Ihr Name..."><br><br><br><br><br>
+    <input type="textarea" name="Nachricht" id="nachricht" placeholder="Ihre Nachricht...">
+    <div id="status"></div>
+    <button type="submit">Senden</button>
+
+
+    <p>Vielen Dank für deinen Eintrag! :)</p><br>
+    <hr><br><br><br><br>
+
+
+    <section id="archiv">
+        <h4>***Archiv***</h4>
+        <div id="output"></div>
+    </section>
+
+    <hr><br>
+
+
+    <section id="contact">
+        <h3>Kontakt</h3><br>
+        <h5>Jülide Tiryaki</h5>
+        <h5>E-Mail: juelide.tiryaki@student.reutlingen-university.de</h5><br>
+        <h5>Fatina Sulejmani</h5>
+        <h5>fatina.sulejmani@student.reutlingen-university.de</h5><br>
+        <h5>Zeynep Öztürk</h5>
+        <h5>zeynep.oeztuerk@student.reutlingen-university.de</h5><br>
+    </section>
+
+
+</form>
+<script
+        src='js/index.js'></script>
+</body>
+</html>
